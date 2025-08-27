@@ -35,12 +35,49 @@ shortURLS/
 ├── queries.sql     // Database schema & queries
 ├── .env            // Environment variables
 └── README.md       // Project documentation
-How It Works 🔍
+```
+## How It Works 🔍
 
-A user submits a long URL.
+- The user submits a **long URL** through the application.  
+- The backend generates a **unique short ID** and stores it along with the original URL in the database.  
+- When a user visits the **shortened link**, the service retrieves the original URL using the short ID.  
+- The user is then seamlessly **redirected to the original URL**.  
+- The mapping remains stored in the database for future requests.  
 
-The backend generates a unique short ID and stores it with the original URL in the database.
+ ## Project Preview 🖼️
+ ## Getting Started
+ 
+### Prerequisites
+- **Node.js** (v14 or above)  
+- **MySQL/PostgreSQL** installed locally or hosted  
+- **Git** (optional, for cloning the repository)  
 
-When someone visits the short link, the service looks up the original URL and redirects the user.
+---
 
-The mapping stays persistent in the database for repeated use.
+### Installation
+
+- **Clone the Repository**
+  ```bash
+  git clone https://github.com/ChillyColor/shortURLS.git
+  cd shortURLS
+  ```
+- **Install Dependecies**
+   ```bash
+  npm install
+    ```
+- **Setup Environment Variables(.env)**
+  ```bash
+  PORT=3000
+  DB_HOST=localhost
+  DB_USER=your_username
+  DB_PASSWORD=your_password
+  DB_NAME=shorturls
+  ```
+- **Run the Application**
+  ```bash
+  nodemon index.js
+  ```
+## Developed By 👨‍💻
+
+**Aakarsh Divyam**  
+GitHub: [@Aakarsh](https://github.com/ChillyColor)
