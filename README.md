@@ -58,7 +58,7 @@ shortURLS/
 
 ### Updated Dashboard
 ![Updated Dashboard](Images/Udb.png)
- ## Getting Started
+ ## Getting Started ⚙️
  
 ### Prerequisites
 - **Node.js** (v14 or above)  
@@ -67,7 +67,7 @@ shortURLS/
 
 ---
 
-### Installation ⚙️
+### Installation 
 
 - **Clone the Repository**
   ```bash
