@@ -45,6 +45,20 @@ shortURLS/
 - The mapping remains stored in the database for future requests.  
 
  ## Project Preview 🖼️
+ ### Home Page
+![Home Page](Images/Screenshot-2025-08-27-111956.png)
+
+### Login Page
+![Login Page](Images/Screenshot-2025-08-27-112012.png)
+
+### Dashboard
+![Dashboard](Images/Screenshot-2025-08-27-112033.png)
+
+### Add URL
+![Add URL](Images/Screenshot-2025-08-27-112155.png)
+
+### Updated Dashboard
+![Updated Dashboard](Images/Screenshot-2025-08-27-112209.png)
  ## Getting Started
  
 ### Prerequisites
@@ -54,7 +68,7 @@ shortURLS/
 
 ---
 
-### Installation
+### Installation ⚙️
 
 - **Clone the Repository**
   ```bash
