@@ -49,8 +49,10 @@ shortURLS/
 ![Home Page](Images/home.png)
 
 ### Login Page
-![Login Page](login.png)
+![Login Page](Images/login.png)
 
+### Dashboard
+![Dashboard](Images/dahboard.png)
 ### Add URL
 ![Add URL](Images/inserting.png)
 
