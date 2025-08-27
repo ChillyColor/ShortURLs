@@ -46,19 +46,16 @@ shortURLS/
 
  ## Project Preview 🖼️
  ### Home Page
-![Home Page](Images/Screenshot-2025-08-27-111956.png)
+![Home Page](Images/home.png)
 
 ### Login Page
-![Login Page](Images/Screenshot-2025-08-27-112012.png)
-
-### Dashboard
-![Dashboard](Images/Screenshot-2025-08-27-112033.png)
+![Login Page](login.png)
 
 ### Add URL
-![Add URL](Images/Screenshot-2025-08-27-112155.png)
+![Add URL](Images/inserting.png)
 
 ### Updated Dashboard
-![Updated Dashboard](Images/Screenshot-2025-08-27-112209.png)
+![Updated Dashboard](Images/dahboard.png)
  ## Getting Started
  
 ### Prerequisites
