@@ -57,7 +57,7 @@ shortURLS/
 ![Add URL](Images/inserting.png)
 
 ### Updated Dashboard
-![Updated Dashboard](Images/dahboard.png)
+![Updated Dashboard](Images/Udb.png)
  ## Getting Started
  
 ### Prerequisites
