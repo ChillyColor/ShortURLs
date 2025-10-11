@@ -1,0 +1,139 @@
+body {
+  background-color: #e8ecef;
+}
+
+.centered {
+  padding-top: 120px;
+  text-align: center;
+}
+
+/* Perfectly center content vertically and horizontally */
+.full-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 60px); /* leave room for any fixed header */
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.secret-text {
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  background-color: #000;
+}
+/*buttos*/
+.btn_container{
+  display:flex;
+  justify-content: space-around;
+}
+/* Utilities */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.jumbotron {
+  padding: 2rem 1rem;
+  background: transparent;
+}
+.display-3 {
+  font-size: 2.25rem;
+}
+/* Table*/
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+  text-align: left;
+}
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+th {
+  background-color: #000;
+  color: white;
+  font-weight: bold;
+}
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+tr:hover {
+  background-color: #ddd;
+}
+a {
+  text-decoration: none;
+  color: #007bff;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive table wrapper */
+.table-responsive-custom {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .centered {
+    padding-top: 60px;
+  }
+  .display-3 {
+    font-size: 1.75rem;
+  }
+  .secret-text {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+  .btn_container{
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+  }
+  .btn_container > div {
+    width: 100%;
+    text-align: center;
+  }
+  /* Make form inputs full width on small screens */
+  input.form-control {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .display-3 {
+    font-size: 1.5rem;
+  }
+  .centered i.fas {
+    font-size: 3rem;
+  }
+}
+
+/* Home page tweaks */
+.home-hero i.fas {
+  display: block;
+  margin: 0 auto 1rem;
+}
+.home-hero .btn {
+  margin: 0.25rem;
+}
+
+@media (max-width: 576px) {
+  .full-center {
+    padding: 12px;
+    min-height: calc(100vh - 40px);
+  }
+  .display-3 {
+    font-size: 1.4rem;
+  }
+  .home-hero i.fas {
+    font-size: 2.5rem;
+  }
+}
