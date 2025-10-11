@@ -28,11 +28,19 @@ const saltRound = 10;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
+app.set('trust proxy', 1); // trust first proxy
+
 app.use(
   session({
     secret: process.env.SECRET,
     resave: false,
     saveUninitialized: true,
+    proxy: true,
+    cookie: {
+      secure: process.env.NODE_ENV === 'production', // Use secure cookies in production
+      httpOnly: true,
+      sameSite: 'lax'
+    }
   })
 );
 
@@ -235,7 +243,7 @@ passport.use(
   new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    callbackURL: process.env.CALLBACK_URL || "http://localhost:3000/auth/google/dashboard",
+    callbackURL: process.env.CALLBACK_URL || "https://shorturls-jy64.onrender.com/auth/google/dashboard",
     userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo",
   },
   async(accessToken,refreshToken,profile,cb)=>{
