@@ -17,8 +17,8 @@
         <% secret.forEach(item => { %>
           <tr>
             <td><%= item.original_url %></td>
-            <td><a href="https://shorturls-jy64.onrender.com//<%= item.short_key %>" target="_blank">
-              http://localhost:3000/<%= item.short_key %></a></td>
+            <td><a href="https://shorturls-jy64.onrender.com/<%= item.short_key %>" target="_blank">
+              https://shorturls-jy64.onrender.com//<%= item.short_key %></a></td>
             <td>
               <form action="/delete" method="POST">
                 <input type="hidden" name="id" value="<%= item.short_key %>">
