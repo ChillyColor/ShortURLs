@@ -8,7 +8,7 @@ import { Strategy } from "passport-local";
 import GoogleStrategy from "passport-google-oauth2";
 import session from "express-session";
 import env from "dotenv";
-import shortid from "shortid";
+import {nanoid} from "nanoid"
 env.config();
 const pool = new pg.Pool({
   host: process.env.PGHOST,
@@ -124,7 +124,7 @@ app.post("/submit", async (req, res) => {
   if (result.rows.length > 0) {
     code = result.rows[0].short_key;
   } else {
-    code = shortid.generate();
+    code = nanoid(4);
     await pool.query(
       "INSERT INTO urls (user_id,short_key,original_url) VALUES ($1,$2,$3)",
       [id, code, link]
