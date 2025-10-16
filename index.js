@@ -175,7 +175,6 @@ app.get("/logout", (req, res) => {
 });
 app.get("/:code", async (req, res) => {
   const { code } = req.params;
-  if (!req.isAuthenticated()) return res.redirect("/login");
   const id = req.user.id;
   try {
     const result = await pool.query(
