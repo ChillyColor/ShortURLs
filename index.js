@@ -20,7 +20,7 @@ const pool = new pg.Pool({
     rejectUnauthorized: false
   }
 });
-const { PGHOST, PGDATABASE, PGUSER, PGPASSWORD } = process.env;
+const { PGHOST, PGDATABASE, PGUSER, PGPASSWORD, ORG_URL } = process.env;
 const app = express();
 const port = process.env.PORT || 3000;
 const saltRound = 10;
@@ -65,7 +65,7 @@ app.get("/dashboard", async (req, res) => {
       "SELECT short_key,original_url,user_id FROM urls WHERE user_id= $1",
       [id]
     );
-    res.render("dashboard.ejs", { secret: secret.rows });
+    res.render("dashboard.ejs", { secret: secret.rows ,display: ORG_URL});
   } else {
     res.redirect("/login");
   }
@@ -243,7 +243,7 @@ passport.use(
   new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    callbackURL: process.env.CALLBACK_URL || "https://shorturls-jy64.onrender.com/auth/google/dashboard",
+    callbackURL: 'http://localhost:3000' || process.env.CALLBACK_URL,
     userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo",
   },
   async(accessToken,refreshToken,profile,cb)=>{
