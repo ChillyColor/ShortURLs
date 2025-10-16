@@ -175,11 +175,10 @@ app.get("/logout", (req, res) => {
 });
 app.get("/:code", async (req, res) => {
   const { code } = req.params;
-  const id = req.user.id;
   try {
     const result = await pool.query(
-      "SELECT original_url FROM urls WHERE user_id=$1 AND short_key=$2",
-      [id, code]
+      "SELECT original_url FROM urls WHERE short_key=$1",
+      [code]
     );
     if (result.rows.length > 0) {
       res.redirect(result.rows[0].original_url);
